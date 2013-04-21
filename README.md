@@ -37,8 +37,26 @@ Então sistema deve lançar a mensagem "A senha deve ter no minimo 4 caracteres"
 Salvar endereço do usuário pelo CEP
 -------------------------
 
-####User Story 2
+####User Story 2  
+Como Gerente de Entrega   
+Quero que o sistema carregue automaticamente o endereço ao informar o cep   
+Para que seja possível o envio do boleto pelo correio.  
 
 ####Critérios de aceitação
 
+Dado que quero inserir um novo usuário  
+Quando não informe o CEP   
+Então sistema deve lançar a mensagem "O CEP deve ser informado"  
+
+Dado que quero inserir um novo usuário  
+Quando informe o cep invalido 
+Então sistema deve lançar a mensagem "O CEP deve ser valido"
+
+Dado que quero inserir um novo usuário  
+Quando informe o cep valido e ele não exista   
+Então sistema deve lançar a mensagem "Não foi possível localizar o endereço"
+
+Dado que quero inserir um novo usuário  
+Quando informe o cep valido   
+Então sistema buscar o endereço dos correios e vincular ao usuário  
  
